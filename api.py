@@ -1,4 +1,4 @@
-#importing objects from the flask module
+#importing objects from the flask module  
 from flask import Flask, jsonify, request
 
 
@@ -34,7 +34,7 @@ diary = [
 def test():
     return jsonify({'message': 'my diary'})
 
-#a route that returns all entries in the list
+#a route that returns all entries in the list above created in my dictionary
 @app.route('/API/v1/index', methods = ['GET'])
 def returnAll():
     return jsonify({'entry': diary})
@@ -67,4 +67,4 @@ def editOne(entry):
 
 #returning app port 5000 in debug mode
 if __name__ == '__main__':
-    app.run(debug = True, port = 5000)
+    app.run(debug = True, port = 5000)#(5000)is the initial number for ports.
